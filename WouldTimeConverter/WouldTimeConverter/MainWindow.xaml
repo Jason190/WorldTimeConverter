@@ -1,0 +1,70 @@
+﻿<Window x:Class="WouldTimeConverter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WouldTimeConverter"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        >
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0" Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock Text="源时区" VerticalAlignment="Center" FontSize="20"/>
+            <ComboBox Grid.Row="1" Margin="20" ItemsSource="{Binding }"/>
+            <Grid Grid.Row="2" Margin="20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="0.5*"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <ComboBox Grid.Column="0" IsEditable="True"/>
+                <ComboBox Grid.Column="1"/>
+                <ComboBox Grid.Column="2"/>
+                <ComboBox Grid.Column="4"/>
+                <ComboBox Grid.Column="5"/>
+            </Grid>
+            <Button Content="计算" Grid.Row="4" Margin="25" Grid.ColumnSpan="2"/>
+        </Grid>
+        <Grid Grid.Column="1" Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock Text="目标时区" VerticalAlignment="Center" FontSize="20"/>
+            <ComboBox Grid.Row="1" Margin="20"/>
+            <Grid Grid.Row="2" Margin="20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="0.5*"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <ComboBox Grid.Column="0" IsEditable="True"/>
+                <ComboBox Grid.Column="1"/>
+                <ComboBox Grid.Column="2"/>
+                <ComboBox Grid.Column="4"/>
+                <ComboBox Grid.Column="5"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
