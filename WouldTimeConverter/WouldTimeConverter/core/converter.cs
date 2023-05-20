@@ -16,9 +16,10 @@ public class converter
     public converter(DateTimeOffset input) { 
         InputDateTime = input;
     }
-    public converter() { 
-        InputDateTime= DateTimeOffset.Now;
-    }
+    // 容易用错
+    //public converter() { 
+    //    InputDateTime= DateTimeOffset.Now;
+    //}
     public void setOutTimeZoneInfo(TimeZoneInfo target)
     {
         OutputDateTimeZoneInfo = target;
